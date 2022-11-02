@@ -37,19 +37,20 @@ body {
 
 .list {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
 }
 .link {
   text-decoration: none;
+  /* color: inherit; */
 }
 
 .conteiner {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  margin: 0 auto;
 }
 
 .section {
@@ -60,10 +61,8 @@ body {
 h1,
 h2,
 h3,
-p,
-ul {
+p {
   margin: 0;
-  padding: 0;
 }
 
 img {
@@ -72,9 +71,21 @@ img {
   height: auto;
 }
 
+.button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.address {
+  /* або через клас .footer-addres */
+  font-style: normal;
+}
+
 /* -------------------------Header------------------------- */
 .header {
-	border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-conteiner {
@@ -98,6 +109,7 @@ img {
 }
 
 .logo {
+  margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
 
@@ -107,7 +119,6 @@ img {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  margin-right: 93px;
 }
 .logo-header {
   color: var(--logo-text);
@@ -129,7 +140,7 @@ img {
 }
 
 .nav-item:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 50px;
 }
 
 .header-contact .header-contact-item:not(:last-child) {
@@ -168,13 +179,13 @@ img {
 
 .hero {
   background-color: var(--dark-backgrount);
-  margin-bottom: 149px;
+  padding: 200px 0;
   text-align: center;
 }
 
 .hero-title {
-  padding-top: 200px;
   margin-bottom: 30px;
+  margin: 0 auto;
   width: 696px;
 
   font-weight: 900;
@@ -189,7 +200,6 @@ img {
   display: inline-block;
   padding: 10px 32px;
   min-width: 216px;
-  margin-bottom: 145px;
 
   font-family: inherit;
   font-weight: 700;
@@ -226,21 +236,23 @@ img {
 }
 
 .about-list {
-  --item: 4;
   display: flex;
+  gap: 30px;
+  /* --item: 4;
   flex-wrap: wrap;
   margin-right: calc(-1 * var(--indent));
-  margin-bottom: calc(-1 * var(--indent));
+  margin-bottom: calc(-1 * var(--indent)); */
 }
 
 .about-list-item {
   width: calc(100% / var(--item) - var(--indent));
-  margin-right: var(--indent);
-  margin-bottom: var(--indent);
+  /* margin-right: var(--indent);
+  margin-bottom: var(--indent); */
 }
 
 .about-sub-title {
   font-weight: 700;
+  font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
   color: var(--title-text-color);
@@ -257,7 +269,9 @@ img {
 /* -------------------------Особливості------------------------- */
 
 /* -------------------------Чим займаємося------------------------- */
-
+.working {
+  padding-top: 0;
+}
 .working-title {
   font-weight: 700;
   font-size: 36px;
@@ -270,15 +284,16 @@ img {
 
 .working-list {
   display: flex;
-  flex-wrap: wrap;
+  gap: 30px;
+  /* flex-wrap: wrap;
   margin-right: calc(-1 * var(--indent));
-  margin-bottom: calc(-1 * var(--indent));
+  margin-bottom: calc(-1 * var(--indent)); */
 }
-.working-list-item {
+/* .working-list-item {
   width: calc(100% / var(--item) - var(--indent));
   margin-right: var(--indent);
   margin-bottom: var(--indent);
-}
+} */
 
 /* -------------------------Чим займаємося------------------------- */
 
@@ -300,17 +315,18 @@ img {
 
 .team-list {
   display: flex;
-  flex-wrap: wrap;
+  gap: 30px;
+  /* flex-wrap: wrap;
   margin-right: calc(-1 * var(--indent));
-  margin-bottom: calc(-1 * var(--indent));
+  margin-bottom: calc(-1 * var(--indent)); */
 }
 
 .team-list .team-list-item {
-  --item: 4;
+  /* --item: 4; */
 
   flex-basis: calc(100% / var(--item) - var(--indent));
-  margin-right: var(--indent);
-  margin-bottom: var(--indent);
+  /* margin-right: var(--indent);
+  margin-bottom: var(--indent); */
 
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -421,6 +437,7 @@ img {
 .filter-list-item:not(:last-child) {
   margin-right: 8px;
 }
+
 .filter-btn:hover,
 .filter-btn:focus {
   background: var(--accent-color);
@@ -432,7 +449,7 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* gap: 30px; */
   margin-right: calc(-1 * var(--indent));
   margin-bottom: calc(-1 * var(--indent));
 }
